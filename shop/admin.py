@@ -1,14 +1,13 @@
 from django.contrib import admin
-from .models import Product , Category , Tags
+from .models import Product
 
+@admin.register(Product )
 
-@admin.register(Product , Category , Tags)
+# class CategoryAdmin(admin.ModelAdmin):
+#     fields_display = '__all__'
 
-class CategoryAdmin(admin.ModelAdmin):
-    fields_display = '__all__'
-
-class TagsAdmin(admin.ModelAdmin):
-    fields_display = '__all__'
+# class TagsAdmin(admin.ModelAdmin):
+#     fields_display = '__all__'
 
 class ProductAdmin(admin.ModelAdmin):
     fields_display = '__all__'
